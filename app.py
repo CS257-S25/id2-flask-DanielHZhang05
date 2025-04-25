@@ -8,7 +8,8 @@ app = Flask(__name__)
 @app.route('/', strict_slashes=False)
 def aboutpage():
     """This is the home page that tells the user how to input the data."""
-    return "To access Go to the url http://127.0.0.1:5000/covid_stats/Afghanistan/2021-01-01/2022-01-12 to get the total cases and deaths in Afghanistan between 2021-01-01 to 2022-01-12"
+    return """To access Go to the url http://127.0.0.1:5000/covid_stats/Afghanistan/2021-01-01/2022-01-12 
+    to get the total cases and deaths in Afghanistan between 2021-01-01 to 2022-01-12"""
 
 @app.route('/covid_stats/<country>/<beginning_date>/<ending_date>', strict_slashes=False)
 def covid_deaths(country, beginning_date, ending_date):
