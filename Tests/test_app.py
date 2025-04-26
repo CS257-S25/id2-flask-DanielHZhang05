@@ -4,8 +4,6 @@ import app
 
 
 class TestCovidStats(unittest.TestCase):
-    app.main()
-   
     """This class tests our flask app"""
     def test_main(self):
         """Test the homepage function of the app."""
