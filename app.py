@@ -22,6 +22,9 @@ def covid_deaths(country, beginning_date, ending_date):
     cases, deaths = covid_stats.stats(country, beginning_date, ending_date)
     return f"Total cases in {country} is: {cases}, total deaths in {country} is: {deaths}"
 
+def main():
+    """Main function to run the app."""
+    app.run(debug=True)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    main()
