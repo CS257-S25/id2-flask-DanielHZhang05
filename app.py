@@ -2,6 +2,7 @@
 from flask import Flask
 from ProductionCode import covid_stats
 
+
 app = Flask(__name__)
 
 
