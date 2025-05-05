@@ -1,6 +1,6 @@
 """Tests for app.py"""
 import unittest
-import app
+from app import *
 
 
 class TestCovidStats(unittest.TestCase):
@@ -8,8 +8,8 @@ class TestCovidStats(unittest.TestCase):
     """This class tests our flask app"""
     def test_about_page(self):
         """Test the homepage function of the app."""
-        self.app = app.aboutpage()
-        response = self.app.get('/', follow_redirects=True)
+        self.apps = app.test_client()
+        response = self.apps.get('/', follow_redirects=True)
         self.assertIn(b"""To access add /covid_stats/Afghanistan/2021-01-01/2022-01-12
     to the top of your browswer tab
     to get the total cases and deaths in Afghanistan between 2021-01-01 to 2022-01-12
@@ -20,6 +20,6 @@ class TestCovidStats(unittest.TestCase):
 
     def test_covid_deaths_return(self):
         """Test the about page of the app."""
-        self.app = app.covid_deaths()
-        response = self.app.get('/covid_stats/Afghanistan/2021-01-01/2022-01-12', follow_redirects=True)
+        self.apps = app.test_client()
+        response = self.apps.get('/covid_stats/Afghanistan/2021-01-01/2022-01-12', follow_redirects=True)
         self.assertIn(b"Total cases in Afghanistan is: 1641, total deaths in Afghanistan is: 119", response.data)
