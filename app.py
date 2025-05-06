@@ -1,7 +1,6 @@
 '''Flask app that has a basic route enabled for our covid stats function'''
 from flask import Flask
 from ProductionCode import covid_stats
-from covid_stats import *
 
 app = Flask(__name__)
 
@@ -21,6 +20,7 @@ def aboutpage():
 def covid_deaths(country, beginning_date, ending_date):
     """Function to get the total cases and deaths in a country between two dates."""
     cases, deaths = covid_stats.stats(country, beginning_date, ending_date)
+    h = 0
     return f"Total cases in {country} is: {cases}, total deaths in {country} is: {deaths}"
 
 def main():
