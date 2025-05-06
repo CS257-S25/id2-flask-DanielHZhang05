@@ -20,12 +20,7 @@ def aboutpage():
 def covid_deaths(country, beginning_date, ending_date):
     """Function to get the total cases and deaths in a country between two dates."""
     cases, deaths = covid_stats.stats(country, beginning_date, ending_date)
-    h = 0
     return f"Total cases in {country} is: {cases}, total deaths in {country} is: {deaths}"
 
-def main():
-    """Main function to run the app."""
-    app.run(debug=True)
 
-if __name__ == "__main__":
-    main()
+app.run(debug=True)
