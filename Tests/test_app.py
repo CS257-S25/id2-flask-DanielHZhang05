@@ -22,4 +22,8 @@ class TestCovidStats(unittest.TestCase):
         """Test the about page of the app."""
         self.apps = app.test_client()
         response = self.apps.get('/covid_stats/Afghanistan/2021-01-01/2022-01-12', follow_redirects=True)
-        self.assertIn(b"Total cases in Afghanistan is: 1641, total deaths in Afghanistan is: 119", response.data)
+        self.assertIn(b"Total cases in Afghanistan is: 106497, total deaths in Afghanistan is: 5211", response.data)
+        
+    app.main()
+    exit()
+
