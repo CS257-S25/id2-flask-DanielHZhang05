@@ -1,7 +1,7 @@
 '''Flask app that has a basic route enabled for our covid stats function'''
 from flask import Flask
 from ProductionCode import covid_stats
-
+from covid_stats import *
 
 app = Flask(__name__)
 
