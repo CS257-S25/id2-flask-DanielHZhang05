@@ -36,7 +36,7 @@ class TestCovidStats(unittest.TestCase):
         apps = app.test_client()
         response = apps.get('/print2', follow_redirects=True)
         self.assertIn(b"Printing hello world to the website", response.data)
-        
+
     def test_print3(self):
         """Test the print page of the app."""
         apps = app.test_client()
