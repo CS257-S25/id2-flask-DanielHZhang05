@@ -32,6 +32,11 @@ def covid_print2():
     """Function print hello world to the website"""
     return "Printing hello world to the website"
 
+@app.route('/print3', strict_slashes=False)
+def covid_print2():
+    """Function print hello world! to the website"""
+    return "Printing hello world! to the website"
+
 def main():
     """Main function to run the app."""
     app.run(debug=True)
