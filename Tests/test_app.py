@@ -28,15 +28,11 @@ class TestCovidStats(unittest.TestCase):
     def test_print(self):
         """Test the print page of the app."""
         apps = app.test_client()
-        response = apps.get('/print',
-                                 follow_redirects=True)
-        self.assertIn(b"Printing hello to the website",
-                      response.data)
+        response = apps.get('/print', follow_redirects=True)
+        self.assertIn(b"Printing hello to the website", response.data)
 
     def test_print(self):
         """Test the print page of the app."""
         apps = app.test_client()
-        response = apps.get('/print2',
-                                 follow_redirects=True)
-        self.assertIn(b"Printing hello world to the website",
-                      response.data)
+        response = apps.get('/print2', follow_redirects=True)
+        self.assertIn(b"Printing hello world to the website", response.data)
