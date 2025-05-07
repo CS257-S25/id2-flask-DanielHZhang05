@@ -22,10 +22,10 @@ def covid_deaths(country, beginning_date, ending_date):
     cases, deaths = covid_stats.stats(country, beginning_date, ending_date)
     return f"Total cases in {country} is: {cases}, total deaths in {country} is: {deaths}"
 
-@app.route('/<print>', strict_slashes=False)
-def covid_print(printed):
+@app.route('/print', strict_slashes=False)
+def covid_print():
     """Function to get the total cases and deaths in a country between two dates and to boost coverage"""
-    print(f"Printing {printed} to the website")
+    print("Printing hello to the website")
 
 def main():
     """Main function to run the app."""
