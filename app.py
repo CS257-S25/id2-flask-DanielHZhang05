@@ -33,7 +33,7 @@ def covid_print2():
     return "Printing hello world to the website"
 
 @app.route('/print3', strict_slashes=False)
-def covid_print2():
+def covid_print3():
     """Function print hello world! to the website"""
     return "Printing hello world! to the website"
 
