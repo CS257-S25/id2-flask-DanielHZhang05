@@ -50,6 +50,5 @@ def highest (week):
 '''
 
 if __name__ == "__main__":
-    add_one()
     print(reader)
     

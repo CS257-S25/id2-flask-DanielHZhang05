@@ -1,6 +1,6 @@
 """Tests for app.py"""
 import unittest
-from app import *
+from app import app
 
 
 class TestCovidStats(unittest.TestCase):

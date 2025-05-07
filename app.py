@@ -8,11 +8,14 @@ app = Flask(__name__)
 @app.route('/', strict_slashes=False)
 def aboutpage():
     """This is the home page that tells the user how to input the data."""
-    return """To access add /covid_stats/Afghanistan/2021-01-01/2021-01-12
+    return """To access add 
+/covid_stats/Afghanistan/2021-01-01/2021-01-12
     to the top of your browswer tab
-    to get the total cases and deaths in Afghanistan between 2021-01-01 to 2021-01-12
+    to get the total cases and deaths in Afghanistan between 
+    2021-01-01 to 2021-01-12
     If you want to you can replace Afghanistan with any country of your choice
-    and the dates with a date of your choice. The earliest date is 2020-01-05
+    and the dates with a date of your choice. 
+    The earliest date is 2020-01-05
     and the latest date is 2025-03-23
     Make sure to follow the correct format of YYYY-MM-DD when entering dates"""
 
