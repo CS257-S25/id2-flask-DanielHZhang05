@@ -24,3 +24,11 @@ class TestCovidStats(unittest.TestCase):
                                  follow_redirects=True)
         self.assertIn(b"Total cases in Afghanistan is: 1641, total deaths in Afghanistan is: 119",
                       response.data)
+
+    def test_print(self):
+        """Test the print page of the app."""
+        apps = app.test_client()
+        response = apps.get('/print',
+                                 follow_redirects=True)
+        self.assertIn(b"Printing to the website",
+                      response.data)
