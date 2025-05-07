@@ -24,8 +24,13 @@ def covid_deaths(country, beginning_date, ending_date):
 
 @app.route('/print', strict_slashes=False)
 def covid_print():
-    """Function to get the total cases and deaths in a country between two dates and to boost coverage"""
-    print("Printing hello to the website")
+    """Function to print hello to the website"""
+    return("Printing hello to the website")
+    
+@app.route('/print2', strict_slashes=False)
+def covid_print():
+    """Function print hello world to the website"""
+    return("Printing hello world to the website")
 
 def main():
     """Main function to run the app."""
